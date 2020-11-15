@@ -1,0 +1,29 @@
+{
+  "tyler": {
+    "password": "112334",
+    "user": "tyler",
+    "meetings": [
+      2
+    ]
+  },
+  "john": {
+    "password": "012",
+    "user": "john",
+    "meetings": []
+  },
+  "sample": {
+    "user": "sample",
+    "password": "123",
+    "meetings": [
+      2,
+      0
+    ]
+  },
+  "name": {
+    "user": "name",
+    "password": "123",
+    "meetings": [
+      0
+    ]
+  }
+}
