@@ -50,10 +50,10 @@ expressApp.get('/userInfo', (req, res) => {
 
 
 expressApp.get('/meeting/:id', (req, res) => {
-    if(req.session.user == undefined){
-        res.status(403).send("No Login");
-        return;
-    }
+    //if(req.session.user == undefined){
+       // res.status(403).send("No Login");
+       // return;
+    //}
     
     let m = meeting.findByID(req.params.id);
     if (m == null) {
