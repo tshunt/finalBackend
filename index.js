@@ -19,9 +19,10 @@ expressApp.use(bParse.urlencoded({
 expressApp.use(bParse.json());
 expressApp.use(expressSession({
     secret: "superdupersecret",
-    cookie: {maxAge: 60000, secure: true, sameSite: "none"},
+    cookie: {maxAge: 600000, secure: true, sameSite: "none"},
     resave: false,
     saveUninitialized: false,
+    proxy: true,
     name: "SessionCookie",
 }));
 expressApp.use(cors({credentials: true, origin: ["http://localhost:3000", "https://unruffled-wilson-b7bba4.netlify.app"]}));
@@ -244,5 +245,7 @@ if(port == null || port == ""){
     port = 3030;
 }
 expressApp.listen(port, function(){
-    //console.log("Running on 3030.");
+    if(port == 3030){
+        console.log("Running on 3030.");
+    }
 })
