@@ -24,7 +24,7 @@ expressApp.use(expressSession({
     saveUninitialized: false,
     name: "SessionCookie",
 }));
-expressApp.use(cors({credentials: true, origin: ["http://localhost:3000", "https://unruffled-wilson-b7bba4.netlify.app"], credentials: true}));
+expressApp.use(cors({credentials: true, origin: ["http://localhost:3000", "https://unruffled-wilson-b7bba4.netlify.app"]}));
 
 const store = require('data-store')({ path: process.cwd() + '/data/logins.json' });
 
@@ -50,10 +50,10 @@ expressApp.get('/userInfo', (req, res) => {
 
 
 expressApp.get('/meeting/:id', (req, res) => {
-    //if(req.session.user == undefined){
-       // res.status(403).send("No Login");
-       // return;
-    //}
+    if(req.session.user == undefined){
+        res.status(403).send("No Login");
+        return;
+    }
     
     let m = meeting.findByID(req.params.id);
     if (m == null) {
