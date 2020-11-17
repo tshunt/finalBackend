@@ -140,8 +140,6 @@ expressApp.post('/meeting/comment/:id', (req, res) => {
         m.update();
 
         res.json(true);
-    }
-
 })
 
 expressApp.put('/meeting/:id', (req, res) => {

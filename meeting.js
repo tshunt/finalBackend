@@ -52,7 +52,7 @@ Meeting.getIDSbyOwner = function(owner){
 Meeting.findByID = (id) => {
     let mdata = store.get(id);
     if (mdata != null) {
-        return new Meeting(mdata.className, mdata.time, mdata.date, mdata.attendees, mdata.location, mdata.id, mdata.owner);
+        return new Meeting(mdata.className, mdata.time, mdata.date, mdata.attendees, mdata.location, mdata.id, mdata.owner, mdata.desc, mdata.comments);
     }
     return null;
 }

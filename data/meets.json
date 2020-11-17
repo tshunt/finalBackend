@@ -9,7 +9,12 @@
     ],
     "location": "500 UNC Area",
     "id": 0,
-    "owner": "tyler"
+    "owner": "tyler",
+    "desc": "a meeting",
+    "comments": [
+      "Test comment",
+      "Test comment 2"
+    ]
   },
   "2": {
     "className": "Comp 100",
@@ -21,6 +26,19 @@
     ],
     "location": "there",
     "id": 2,
-    "owner": "tyler"
+    "owner": "tyler",
+    "desc": "a meeting",
+    "comments": []
+  },
+  "3": {
+    "className": "Comp 500",
+    "time": "21",
+    "date": "110-10",
+    "attendees": [],
+    "location": "there over there",
+    "id": 3,
+    "owner": "tyler",
+    "desc": "a meeting",
+    "comments": []
   }
 }
