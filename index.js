@@ -85,11 +85,10 @@ expressApp.post('/meeting', (req, res) => {
         return;
     }
 
-    let {className, time, date, attendees, location} = req.body;
+    let {className, time, date, attendees, location, desc, comments} = req.body;
     let owner = req.session.user;
-    attendees.push(owner);
 
-    let meet = meeting.create(className, time, date, attendees, location, owner);
+    let meet = meeting.create(className, time, date, attendees, location, owner, desc, comments);
     if(meet == null){
         res.status(400).send("Improper Request. Check Parameters.");
         return;
@@ -124,6 +123,27 @@ expressApp.post('/meeting/join/:id', (req, res) => {
 
 })
 
+expressApp.post('/meeting/comment/:id', (req, res) => {
+    if(req.session.user == undefined){
+        res.status(403).send("No Login");
+        return;
+    }
+    
+    let m = meeting.findByID(req.params.id);
+
+    if(m == null){
+        res.status(404).send("Meeting not found");
+        return;
+    }
+
+        m.comments.push(req.body.comment);
+        m.update();
+
+        res.json(true);
+    }
+
+})
+
 expressApp.put('/meeting/:id', (req, res) => {
     if(req.session.user == undefined){
         res.status(403).send("No Login");
@@ -140,12 +160,14 @@ expressApp.put('/meeting/:id', (req, res) => {
         return;
     }
 
-    let {className, time, date, attendees, location} = req.body;
+    let {className, time, date, attendees, location, desc, comments} = req.body;
     m.className = className;
     m.time = time;
     m.date = date;
     m.attendees = attendees;
     m.location = location;
+    m.desc = desc;
+    m.comments = comments;
 
     m.update();
 

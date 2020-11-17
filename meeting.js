@@ -6,7 +6,7 @@ const store = require('data-store')({ path: process.cwd() + '/data/meets.json' }
 
 class Meeting{
 
-    constructor(className, time, date, attendees, location, id, owner){
+    constructor(className, time, date, attendees, location, id, owner, desc, comments){
         this.className = className;
         this.time = time;
         this.date = date;
@@ -14,6 +14,8 @@ class Meeting{
         this.location = location;
         this.id = id;
         this.owner = owner
+        this.desc = desc;
+        this.comments = comments
     }
 
     update() {
@@ -62,10 +64,10 @@ Meeting.next_id = Meeting.getIDS().reduce((max, next_id) => {
     return max;
 }, -1) + 1;
 
-Meeting.create = function(className, time, date, attendees, location, owner){
+Meeting.create = function(className, time, date, attendees, location, owner, desc, comments){
     let id = Meeting.next_id;
     Meeting.next_id += 1;
-    let meet = new Meeting(className, time, date, attendees, location, id, owner);
+    let meet = new Meeting(className, time, date, attendees, location, id, owner, desc, comments);
     store.set(meet.id.toString(), meet);
     return meet;
 }
