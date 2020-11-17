@@ -19,12 +19,12 @@ expressApp.use(bParse.urlencoded({
 expressApp.use(bParse.json());
 expressApp.use(expressSession({
     secret: "superdupersecret",
-    cookie: {maxAge: 60000},
+    cookie: {maxAge: 60000, sameSite: "none"},
     resave: false,
     saveUninitialized: false,
-    name: "SessionCookie"
+    name: "SessionCookie",
 }));
-expressApp.use(cors({credentials: true, origin:"http://localhost:3000"}));
+expressApp.use(cors({credentials: true, origin: "http://localhost:3000"}));
 
 const store = require('data-store')({ path: process.cwd() + '/data/logins.json' });
 

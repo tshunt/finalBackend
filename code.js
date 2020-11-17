@@ -1,7 +1,7 @@
 document.onreadystatechange = async function() {
     let login = await axios({
         method:'post',
-        url: `http://localhost:3030/login`,
+        url: `https://stark-depths-67325.herokuapp.com/login`,
         withCredentials: true,
         data: {
             user: "tyler",
@@ -9,9 +9,11 @@ document.onreadystatechange = async function() {
         }
     })
 
+    console.log(login);
+
     let res = await axios({
         method:'get',
-        url: `http://localhost:3030/meeting/0`,
+        url: `https://stark-depths-67325.herokuapp.com/meeting/0`,
         withCredentials: true
     })
 
