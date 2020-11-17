@@ -24,7 +24,7 @@ expressApp.use(expressSession({
     saveUninitialized: false,
     name: "SessionCookie",
 }));
-expressApp.use(cors({credentials: true, origin: "http://localhost:3000"}));
+expressApp.use(cors({credentials: true, origin: ["http://localhost:3000", "https://unruffled-wilson-b7bba4.netlify.app"]}));
 
 const store = require('data-store')({ path: process.cwd() + '/data/logins.json' });
 
