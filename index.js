@@ -19,7 +19,7 @@ expressApp.use(bParse.urlencoded({
 expressApp.use(bParse.json());
 expressApp.use(expressSession({
     secret: "superdupersecret",
-    cookie: {maxAge: 60000, sameSite: "none"},
+    cookie: {maxAge: 60000, sameSite: "none", secure: true},
     resave: false,
     saveUninitialized: false,
     name: "SessionCookie",
