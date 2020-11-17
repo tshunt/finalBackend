@@ -136,6 +136,9 @@ expressApp.post('/meeting/comment/:id', (req, res) => {
         return;
     }
 
+    if(req.body.comment == undefined){
+        res.status(404).send("No comment specified");
+    }
         m.comments.push(req.body.comment);
         m.update();
 
