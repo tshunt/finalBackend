@@ -221,7 +221,11 @@ expressApp.post('/login', (req, res) => {
 expressApp.post('/signup', (req, res) => {
     let user = req.body.user;
     let password = req.body.password;
-    let meetings = [];
+    let email = req.body.email;
+    let major = req.body.major;
+    let grad = req.body.year;
+    let house = req.body.house;
+    let pronouns = req.body.pronouns;
 
     let USD = store.get(user);
 
@@ -229,7 +233,7 @@ expressApp.post('/signup', (req, res) => {
         res.status(404).send("User Already Exists!")
         return;
     } else {
-        store.set(user, {user, password, meetings});
+        store.set(user, {user, password, email, major, grad, house, pronouns});
         res.json(true);
     }
 })
