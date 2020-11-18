@@ -25,5 +25,22 @@
     "meetings": [
       0
     ]
+  },
+  "jimbo": {
+    "user": "jimbo",
+    "password": "yes",
+    "email": "jimbo@aol.com",
+    "major": "Comp Sci",
+    "house": "on-campus",
+    "pronouns": "he/him"
+  },
+  "himbo": {
+    "user": "himbo",
+    "password": "yes",
+    "email": "jimbo@aol.com",
+    "major": "Comp Sci",
+    "grad": 2021,
+    "house": "on-campus",
+    "pronouns": "he/him"
   }
 }

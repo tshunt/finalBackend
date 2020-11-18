@@ -227,6 +227,7 @@ expressApp.post('/signup', (req, res) => {
     let house = req.body.house;
     let pronouns = req.body.pronouns;
 
+
     let USD = store.get(user);
 
     if (USD != null){
