@@ -42,5 +42,13 @@
     "grad": 2021,
     "house": "on-campus",
     "pronouns": "he/him"
+  },
+  "jimbo@aol": {
+    "user": "signman",
+    "password": "yes",
+    "email": "jimbo@aol",
+    "major": "Comp Sci",
+    "house": "on-campus",
+    "pronouns": "he/him"
   }
 }
