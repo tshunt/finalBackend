@@ -200,10 +200,10 @@ expressApp.delete('/meeting/:id', (req, res) => {
 
 expressApp.post('/login', (req, res) => {
 
-    let user = req.body.user;
+    let email = req.body.email;
     let password = req.body.password;
 
-    let USD = store.get(user);
+    let USD = store.get(email);
 
     if (USD == null){
         res.status(404).send("No user by this name.")
@@ -234,7 +234,7 @@ expressApp.post('/signup', (req, res) => {
         res.status(404).send("User Already Exists!")
         return;
     } else {
-        store.set(user, {user, password, email, major, grad, house, pronouns});
+        store.set(email, {user, password, email, major, grad, house, pronouns});
         res.json(true);
     }
 })
