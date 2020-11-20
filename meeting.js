@@ -27,6 +27,15 @@ class Meeting{
     }
 
 }
+Meeting.getAll = function(){
+    let toRet = new Array();
+    let ids = Meeting.getIDS();
+    ids.forEach(function (meeting){
+        let cl = store.get(meeting.toString());
+        toRet.push(cl);
+    });
+    return toRet;
+}
 
 Meeting.getNames = function(){
     let toRet = new Array();

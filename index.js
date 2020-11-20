@@ -80,6 +80,21 @@ expressApp.get('/meetingNames', (req, res) => {
     res.json(m);
 } );
 
+expressApp.get('/meetingAll', (req, res) => {
+    if(req.session.user == undefined){
+        res.status(403).send("No Login");
+        return;
+    }
+    
+    let m = meeting.getAll();
+    if (m == null) {
+        res.status(404).send(`No Meetings`);
+        return;
+    }
+
+    res.json(m);
+} );
+
 expressApp.post('/meeting', (req, res) => {
     if(req.session.user == undefined){
         res.status(403).send("No Login");
