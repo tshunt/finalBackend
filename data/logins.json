@@ -1,53 +1,10 @@
 {
-  "tyler": {
+  "Tyler": {
+    "user": "Tyler",
     "password": "112334",
-    "user": "tyler",
-    "meetings": [
-      2
-    ]
-  },
-  "john": {
-    "password": "012",
-    "user": "john",
-    "meetings": []
-  },
-  "sample": {
-    "user": "sample",
-    "password": "123",
-    "meetings": [
-      2,
-      0
-    ]
-  },
-  "name": {
-    "user": "name",
-    "password": "123",
-    "meetings": [
-      0
-    ]
-  },
-  "jimbo": {
-    "user": "jimbo",
-    "password": "yes",
-    "email": "jimbo@aol.com",
-    "major": "Comp Sci",
-    "house": "on-campus",
-    "pronouns": "he/him"
-  },
-  "himbo": {
-    "user": "himbo",
-    "password": "yes",
-    "email": "jimbo@aol.com",
+    "email": "T@aol.com",
     "major": "Comp Sci",
     "grad": 2021,
-    "house": "on-campus",
-    "pronouns": "he/him"
-  },
-  "jimbo@aol": {
-    "user": "signman",
-    "password": "yes",
-    "email": "jimbo@aol",
-    "major": "Comp Sci",
     "house": "on-campus",
     "pronouns": "he/him"
   }

@@ -1,44 +1,43 @@
 {
   "0": {
-    "className": "Comp 998",
+    "className": "Comp 445",
     "time": "3:30 PM",
     "date": "12/25/2020",
     "attendees": [
-      "sample",
-      "name"
+      "Tyler"
     ],
-    "location": "500 UNC Area",
+    "location": "Lenoir",
     "id": 0,
-    "owner": "tyler",
-    "desc": "a meeting",
+    "owner": "Tyler",
+    "desc": "Meeting to discuss new people signing up for 455.",
     "comments": [
-      "Test comment",
-      "Test comment 2"
+      "Why is this on Christmas?"
     ]
   },
   "2": {
     "className": "Comp 100",
-    "time": "2",
-    "date": "10-10",
+    "time": "2:25 PM",
+    "date": "10/10/2020",
     "attendees": [
-      "tyler",
-      "sample"
+      "Tyler"
     ],
-    "location": "there",
+    "location": "Sitterson",
     "id": 2,
-    "owner": "tyler",
-    "desc": "a meeting",
+    "owner": "Tyler",
+    "desc": "Meeting to discuss Unit 4 of Comp 100.",
     "comments": []
   },
   "3": {
     "className": "Comp 500",
-    "time": "21",
-    "date": "110-10",
-    "attendees": [],
-    "location": "there over there",
+    "time": "2:10 PM",
+    "date": "11/10/2020",
+    "attendees": [
+      "Tyler"
+    ],
+    "location": "Murphy",
     "id": 3,
-    "owner": "tyler",
-    "desc": "a meeting",
+    "owner": "Tyler",
+    "desc": "Meeting to study for the 500 final.",
     "comments": []
   }
 }

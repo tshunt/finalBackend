@@ -109,6 +109,7 @@ expressApp.post('/meeting', (req, res) => {
         res.status(400).send("Improper Request. Check Parameters.");
         return;
     }
+    meet.attendees.push(req.session.user);
     return res.json(meet);
 })
 
@@ -131,9 +132,6 @@ expressApp.post('/meeting/join/:id', (req, res) => {
     } else {
         m.attendees.push(req.session.user);
         m.update();
-        let p = store.get(req.session.user);
-        p.meetings.push(m.id);
-        store.set(req.session.user, p);
         res.json(true);
     }
 
