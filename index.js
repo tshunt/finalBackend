@@ -40,6 +40,15 @@ expressApp.get('/meeting', (req, res) => {
     return;
 });
 
+expressApp.get('/meeting/user', (req, res) => {
+    if(req.session.user == undefined){
+        res.status(403).send("No Login");
+        return;
+    }
+    res.json(meeting.getIDSbyOwner(req.session.user));
+    return;
+});
+
 expressApp.get('/userInfo', (req, res) => {
     if(req.session.user == undefined){
         res.status(403).send("No Login");
